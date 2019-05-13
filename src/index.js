@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createBottomTabNavigator, createAppContainer } from "react-navigation";
+
+import Calculator from "./components/calculator";
 
 import task1 from "./functions/task1";
 import task2 from "./functions/task2";
@@ -35,10 +37,9 @@ const styles = StyleSheet.create({
   }
 });
 
-const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen
-  }
+const TabNavigator = createBottomTabNavigator({
+  Home: HomeScreen,
+  Calculator
 });
 
-export default createAppContainer(AppNavigator);
+export default createAppContainer(TabNavigator);
