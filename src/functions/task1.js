@@ -20,7 +20,7 @@ const task1 = (inputStr: string) => {
   if (result === {}) return [];
 
   const output = Object.keys(result)
-    .map(key => ({ [key]: result[key] }))
+    .map(key => ({ [`${key}`]: result[key] }))
     .sort(
       (valueA, valueB) => Object.values(valueB)[0] - Object.values(valueA)[0]
     );

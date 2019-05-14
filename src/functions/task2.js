@@ -67,7 +67,6 @@ const task2 = (n: number, m: string[]): void => {
     return acc + Math.ceil(Math.sqrt(currentArr.length));
   }, 0);
 
-  console.log(findNeverShow(n, returnArrs));
   const cost2 = findNeverShow(n, returnArrs).reduce((acc: number) => {
     return acc + Math.ceil(Math.sqrt(1));
   }, 0);
