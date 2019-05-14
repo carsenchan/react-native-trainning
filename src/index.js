@@ -21,7 +21,17 @@ class HomeScreen extends Component {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: "#5870e2" }}>
         <View style={[styles.container]}>
-          <Text> textInComponent </Text>
+          <Text style={{ color: "white" }}>
+            {" "}
+            1. Please see task 1 & task 2's function result with [Debug
+            Remotely], results would be shown in console.log()
+          </Text>
+          <View style={{ height: 10 }} />
+          <Text style={{ color: "white" }}>
+            {" "}
+            2. Task 1 & Task 2 could be by unit test, 'yarn test' command (few
+            test cases add in /UnitTestCase folder)
+          </Text>
         </View>
       </SafeAreaView>
     );
@@ -32,7 +42,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
     backgroundColor: "#5870e2"
   }
 });
