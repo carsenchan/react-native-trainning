@@ -12,16 +12,20 @@ import renderer from "react-test-renderer";
 import task1 from "../src/functions/task1";
 import task2 from "../src/functions/task2";
 
-import task1Test from "./task1";
+import TestCases from "../UnitTestCase";
 
 // it("renders correctly", () => {
 //   renderer.create(<App />);
 // });
 
 test("Task 1 Unit Test ", () => {
-  // task1Test.forEach(test => {
-  //   console.log(test);
-  //   expect(task1(test.input)).toBe(test.answer);
-  // });
-  expect(task1(task1Test[0].input)).toBe(task1Test[0].answer);
+  TestCases.Test1Cases.forEach(test => {
+    expect(task1(test.input)).toStrictEqual(test.answer);
+  });
+});
+
+test("Task 2 Unit Test ", () => {
+  TestCases.Test2Cases.forEach(test => {
+    expect(task2(test.input.n, test.input.m)).toStrictEqual(test.answer);
+  });
 });
